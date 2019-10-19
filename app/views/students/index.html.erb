@@ -1,0 +1,13 @@
+<h2>~ Turing Students ~</h2><br>
+
+<% @students.each do |student| %>
+  <section id = "student-<%=student.id%>">
+    <p>Name: <%= student.name %></p>
+    <p>Cohort: <%= student.cohort %></p>
+    <% student.instructors.each do |instructor| %>
+      <section id = "instructor-<%= instructor.id %>">
+        <p>Instructor: <%= instructor.name %></p>
+      </section>
+    <% end %>
+  </section><br>
+<% end %>
