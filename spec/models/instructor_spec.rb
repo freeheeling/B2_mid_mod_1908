@@ -6,6 +6,7 @@ RSpec.describe Instructor, type: :model do
   end
 
   describe 'relationships' do
-    it { should have_many :students }
+    it { should have_many :instructor_students }
+    it { should have_many(:students).through(:instructor_students) }
   end
 end
