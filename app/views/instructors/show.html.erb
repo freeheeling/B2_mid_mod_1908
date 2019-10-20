@@ -4,7 +4,9 @@
 
 <% @instructor.students.each do |student| %>
   <section id = "student-<%=student.id%>">
-    <ul>- <%= student.name %></ul>
+    <ul>
+      <li><%= student.name %></li>
+    </ul>
   </section>
 <% end %>
 
